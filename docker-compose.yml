@@ -10,5 +10,15 @@ services:
       POSTGRES_DB: portofolio_app
     networks:
       - fueremi
+  test-db:
+    image: postgres:13
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 9e1tK*VnoAGN
+      POSTGRES_DB: portofolio_app
+    networks:
+      - fueremi
 networks:
   fueremi:
